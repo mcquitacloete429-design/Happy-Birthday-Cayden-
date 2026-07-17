@@ -86,7 +86,11 @@ So...welcome to your little birthday surprise.
 <button onclick="openLetter()">
 ❤️ Open Your Birthday Surprise ❤️
 </button>
+<button onclick="playMusic()">
+🎧 A little surprise for you ❤️
+</button>
 
+<audio id="song" src="untouchable.mp3"></audio>
 <div id="letter">
 
 <h2>💌 Dear Cayden,</h2>
@@ -168,6 +172,9 @@ document.getElementById("message").innerHTML += text.charAt(i);
 i++;
 setTimeout(typeWriter, 50);
 }
+} 
+function playMusic(){
+document.getElementById("song").play();
 }  
 </script>
 
