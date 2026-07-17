@@ -112,7 +112,7 @@ typeWriter();
 }
 
 function confetti(){
-for(let i=0;i<50;i++){
+setInterval(()=>{
 let heart=document.createElement("div");
 heart.innerHTML="❤️";
 heart.className="heart";
@@ -120,14 +120,13 @@ heart.style.left=Math.random()*100+"vw";
 heart.style.animationDuration=(4+Math.random()*5)+"s";
 heart.style.fontSize=(15+Math.random()*30)+"px";
 document.body.appendChild(heart);
-}
 
 setTimeout(()=>{
-document.querySelectorAll(".heart").forEach(heart=>{
 heart.remove();
-});
-},20000);
-  }
+},8000);
+
+},500);
+}
 let text = `Happy Birthday!! 🥳❤️
 
 I wish I could be there to celebrate with you today,
