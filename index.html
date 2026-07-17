@@ -86,9 +86,7 @@ So...welcome to your little birthday surprise.
 <button onclick="openLetter()">
 ❤️ Open Your Birthday Surprise ❤️
 </button>
-<button onclick="playMusic()">
-🎧 A little surprise for you ❤️
-</button>
+
 
 <audio id="song" src="untouchable.mp3"></audio>
 <div id="letter">
@@ -107,8 +105,10 @@ So...welcome to your little birthday surprise.
 
 function openLetter(){
 document.getElementById("letter").style.display="block";
+document.getElementById("song").play();
+confetti();
 typeWriter();
-  }
+}
 
 function confetti(){
 setInterval(()=>{
